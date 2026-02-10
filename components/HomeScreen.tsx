@@ -1,11 +1,16 @@
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
-import { ArrowDown, Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
-import { EXPERIENCE, PERSONAL_INFO, PROJECTS, SKILLS } from "../lib/constants";
-import ExperienceCard from "./ExperienceCard";
+import { Linkedin, Mail } from "lucide-react";
+import {
+  EXPERIENCE,
+  PERSONAL_INFO,
+  PROJECTS,
+  SKILL_GROUPS,
+} from "../lib/constants";
+import AnimatedTerminal from "./AnimatedTerminal";
+import ExperienceSection from "./ExperienceSection";
 import Navigation from "./Navigation";
 import ProjectCard from "./ProjectCard";
-import SkillCard from "./SkillCard";
+import SkillsSection from "./SkillsSection";
 
 export default function HomeScreen() {
   return (
@@ -19,21 +24,9 @@ export default function HomeScreen() {
         className="min-h-screen flex items-center justify-center px-6 pt-20"
       >
         <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 items-center">
-          {/* Photo Side */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-6 flex justify-center md:justify-end order-1 md:order-1">
-            <div className="relative">
-              <div className="absolute inset-0 blur-xl opacity-50"></div>
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-lg overflow-hidden ">
-                <Image
-                  src="/my_pic.jpg"
-                  alt="Your Name"
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-cover"
-                />
-                {/* Placeholder if no image */}
-              </div>
-            </div>
+          {/* Animated Terminal Side */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-6 flex justify-center md:justify-center order-1 md:order-1">
+            <AnimatedTerminal />
           </div>
 
           {/* Info Side */}
@@ -50,9 +43,13 @@ export default function HomeScreen() {
               Frontend Developer
             </h2>
             <p className="text-lg md:text-xl text-[#c4b5a0] mb-8 leading-relaxed">
-              I build exceptional digital experiences with modern web
-              technologies. Passionate about creating clean, efficient, and
-              user-friendly applications.
+              I build exceptional digital experiences using{" "}
+              <span className="text-[#00d9ff] font-semibold">React.js</span> and{" "}
+              <span className="text-[#00d9ff] font-semibold">Next.js</span>,
+              focusing on clean, efficient, and user-friendly applications, with
+              working knowledge of{" "}
+              <span className="text-[#00d9ff] font-semibold">Node.js</span> for
+              backend integration and APIs.
             </p>
 
             {/* Social Links */}
@@ -105,50 +102,13 @@ export default function HomeScreen() {
             </div>
           </div>
         </div>
-
-        {/* Scroll Down Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown size={32} className="text-[#6bcf7f]" />
-        </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-yellow retro-text">
-            SKILLS & TECHNOLOGIES
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <SkillCard title="FRONTEND" skills={SKILLS.frontend} color="pink" />
-            <SkillCard title="BACKEND" skills={SKILLS.backend} color="cyan" />
-            <SkillCard
-              title="TOOLS & MORE"
-              skills={SKILLS.tools}
-              color="green"
-            />
-          </div>
-        </div>
-      </section>
+      <SkillsSection groups={SKILL_GROUPS} />
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 bg-secondary">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-yellow retro-text">
-            WORK EXPERIENCE
-          </h2>
-          <div className="space-y-6">
-            {EXPERIENCE.map((exp) => (
-              <ExperienceCard
-                key={exp.id}
-                company={exp.company}
-                position={exp.position}
-                period={exp.period}
-                responsibilities={exp.responsibilities}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <ExperienceSection experiences={EXPERIENCE} />
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-secondary">
@@ -162,7 +122,8 @@ export default function HomeScreen() {
                 key={project.id}
                 title={project.title.toUpperCase()}
                 description={project.description}
-                technologies={project.technologies}
+                image={project.image}
+                techStack={project.techStack}
                 liveUrl={project.liveUrl}
                 githubUrl={project.githubUrl}
               />

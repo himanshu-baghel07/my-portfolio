@@ -2,10 +2,10 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  technologies: string[];
+  image: string;
+  techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
-  imageUrl?: string;
 }
 
 export interface PersonalInfo {
@@ -29,7 +29,15 @@ export interface Experience {
   company: string;
   position: string;
   period: string;
+  description?: string;
   responsibilities: string[];
+  techStack?: string[];
 }
 
 export type SkillColor = "blue" | "purple" | "pink" | "cyan" | "green";
+
+export interface SkillGroup {
+  title: string;
+  skills: string[];
+  color: "cyan" | "pink" | "green";
+}
