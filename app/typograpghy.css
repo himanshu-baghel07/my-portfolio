@@ -1,0 +1,51 @@
+/* Typography Styles */
+:root {
+  --font-primary: "Audiowide", sans-serif;
+  --font-secondary: "WDXL Lubrifont TC", sans-serif;
+}
+
+/* Base Typography */
+.font-audiowide {
+  font-family: var(--font-primary);
+}
+
+.font-lubrifont {
+  font-family: var(--font-secondary);
+}
+
+/* Heading Styles with Audiowide */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+/* Paragraph and body text with Lubrifont */
+p,
+span,
+a,
+button {
+  font-family: var(--font-secondary);
+}
+
+/* Utility classes for different text elements */
+.title-primary {
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+.title-secondary {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+.text-audiowide {
+  font-family: var(--font-primary);
+}
+
+.text-lubrifont {
+  font-family: var(--font-secondary);
+}

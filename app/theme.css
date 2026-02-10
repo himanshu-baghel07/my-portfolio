@@ -1,0 +1,179 @@
+/* Retro Portfolio Theme */
+:root {
+  /* Primary Colors */
+  --color-bg-primary: #191825;
+  --color-bg-secondary: #1a1f3a;
+  --color-text-primary: #f0e6d2;
+  --color-text-secondary: #c4b5a0;
+
+  /* Accent Colors */
+  --color-accent-pink: #ff4949;
+  --color-accent-yellow: #ffd93d;
+  --color-accent-cyan: #00d9ff;
+  --color-accent-green: #6bcf7f;
+
+  /* Component Specific Colors */
+  --color-nav-bg: rgba(26, 31, 58, 0.95);
+  --color-card-bg: var(--color-bg-secondary);
+  --color-project-bg: var(--color-bg-primary);
+
+  /* Border Colors */
+  --color-border-primary: var(--color-accent-pink);
+  --color-border-secondary: var(--color-accent-cyan);
+  --color-border-tertiary: var(--color-accent-green);
+
+  /* Shadow Colors */
+  --shadow-pink: rgba(255, 107, 157, 0.5);
+  --shadow-cyan: rgba(0, 217, 255, 0.5);
+  --shadow-green: rgba(107, 207, 127, 0.5);
+  --shadow-yellow: rgba(255, 217, 61, 0.5);
+
+  /* Shadow Variants for Cards */
+  --shadow-pink-card: rgba(255, 107, 157, 0.3);
+  --shadow-cyan-card: rgba(0, 217, 255, 0.3);
+  --shadow-green-card: rgba(107, 207, 127, 0.3);
+
+  /* Hover Colors */
+  --color-hover-pink: var(--color-accent-pink);
+  --color-hover-yellow: var(--color-accent-yellow);
+  --color-hover-cyan: var(--color-accent-cyan);
+  --color-hover-green: var(--color-accent-green);
+
+  /* Technology Tag Colors */
+  --color-tech-pink-bg: rgba(255, 107, 157, 0.2);
+  --color-tech-cyan-bg: rgba(0, 217, 255, 0.2);
+  --color-tech-green-bg: rgba(107, 207, 127, 0.2);
+  --color-tech-yellow-bg: rgba(255, 217, 61, 0.2);
+
+  /* Gradient Colors */
+  --gradient-project: linear-gradient(
+    135deg,
+    var(--color-accent-pink),
+    var(--color-accent-yellow),
+    var(--color-accent-cyan)
+  );
+}
+
+/* Utility Classes */
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-nav {
+  background-color: var(--color-nav-bg);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+.text-pink {
+  color: var(--color-accent-pink);
+}
+.text-yellow {
+  color: var(--color-accent-yellow);
+}
+.text-cyan {
+  color: var(--color-accent-cyan);
+}
+.text-green {
+  color: var(--color-accent-green);
+}
+
+.border-pink {
+  border-color: var(--color-accent-pink);
+}
+.border-cyan {
+  border-color: var(--color-accent-cyan);
+}
+.border-green {
+  border-color: var(--color-accent-green);
+}
+.border-yellow {
+  border-color: var(--color-accent-yellow);
+}
+
+.shadow-pink {
+  box-shadow: 0 10px 25px var(--shadow-pink);
+}
+.shadow-cyan {
+  box-shadow: 0 10px 25px var(--shadow-cyan);
+}
+.shadow-green {
+  box-shadow: 0 10px 25px var(--shadow-green);
+}
+.shadow-yellow {
+  box-shadow: 0 10px 25px var(--shadow-yellow);
+}
+
+.shadow-pink-card {
+  box-shadow: 0 4px 15px var(--shadow-pink-card);
+}
+.shadow-cyan-card {
+  box-shadow: 0 4px 15px var(--shadow-cyan-card);
+}
+.shadow-green-card {
+  box-shadow: 0 4px 15px var(--shadow-green-card);
+}
+
+/* Hover Effects */
+.hover-pink:hover {
+  color: var(--color-hover-pink);
+}
+.hover-yellow:hover {
+  color: var(--color-hover-yellow);
+}
+.hover-cyan:hover {
+  color: var(--color-hover-cyan);
+}
+.hover-green:hover {
+  color: var(--color-hover-green);
+}
+
+.hover-bg-pink:hover {
+  background-color: var(--color-accent-pink);
+}
+.hover-bg-yellow:hover {
+  background-color: var(--color-accent-yellow);
+}
+.hover-bg-cyan:hover {
+  background-color: var(--color-accent-cyan);
+}
+.hover-bg-green:hover {
+  background-color: var(--color-accent-green);
+}
+
+.hover-border-yellow:hover {
+  border-color: var(--color-accent-yellow);
+}
+
+/* Technology Tags */
+.tech-pink {
+  background-color: var(--color-tech-pink-bg);
+  color: var(--color-accent-pink);
+  border-color: var(--color-accent-pink);
+}
+.tech-cyan {
+  background-color: var(--color-tech-cyan-bg);
+  color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+}
+.tech-green {
+  background-color: var(--color-tech-green-bg);
+  color: var(--color-accent-green);
+  border-color: var(--color-accent-green);
+}
+.tech-yellow {
+  background-color: var(--color-tech-yellow-bg);
+  color: var(--color-accent-yellow);
+  border-color: var(--color-accent-yellow);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-project {
+  background: var(--gradient-project);
+}
