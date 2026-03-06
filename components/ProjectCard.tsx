@@ -32,7 +32,7 @@ export default function ProjectCard({
 
   return (
     <article
-      className="group relative bg-secondary rounded-xl overflow-hidden border-2 border-pink transition-all duration-500 ease-out hover:border-cyan hover:-translate-y-2 hover:shadow-cyan-card shadow-pink-card motion-reduce:hover:transform-none motion-reduce:transition-none"
+      className="group relative bg-secondary rounded-xl overflow-hidden border-2 border-pink transition-all duration-500 ease-out hover:border-cyan  hover:shadow-cyan-card shadow-pink-card motion-reduce:hover:transform-none motion-reduce:transition-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -47,7 +47,7 @@ export default function ProjectCard({
           </div>
           <div className="flex-1 ml-2 h-6 bg-primary/60 rounded border border-cyan/20 flex items-center px-3">
             <span className="text-xs text-secondary/60 truncate">
-              {liveUrl || "localhost:3000"}
+              {liveUrl || "localhost"}
             </span>
           </div>
         </div>

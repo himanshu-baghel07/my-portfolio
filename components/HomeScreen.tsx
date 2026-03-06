@@ -1,5 +1,5 @@
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Twitter } from "lucide-react";
 import {
   EXPERIENCE,
   PERSONAL_INFO,
@@ -14,7 +14,7 @@ import SkillsSection from "./SkillsSection";
 
 export default function HomeScreen() {
   return (
-    <div className="min-h-screen bg-primary text-primary">
+    <div className="min-h-dvh md:min-h-screen bg-primary text-primary">
       {/* Navigation */}
       <Navigation />
 
@@ -40,7 +40,7 @@ export default function HomeScreen() {
               Himanshu Baghel
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-[#00d9ff]">
-              Frontend Developer
+              Full-stack Developer
             </h2>
             <p className="text-lg md:text-xl text-[#c4b5a0] mb-8 leading-relaxed">
               I build exceptional digital experiences using{" "}
@@ -55,7 +55,7 @@ export default function HomeScreen() {
             {/* Social Links */}
             <div className="flex gap-4 justify-center md:justify-start mb-8">
               <a
-                href="https://github.com"
+                href="https://github.com/himanshu-baghel07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-[#00d9ff] text-[#0a0e27] rounded-lg hover:bg-[#ffd93d] transition-all hover:scale-110 shadow-lg shadow-[#00d9ff]/50"
@@ -63,7 +63,7 @@ export default function HomeScreen() {
                 <SiGithub size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/himanshubaghel1900/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-[#00d9ff] text-[#0a0e27] rounded-lg hover:bg-[#ffd93d] transition-all hover:scale-110 shadow-lg shadow-[#00d9ff]/50"
@@ -71,7 +71,7 @@ export default function HomeScreen() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/himanshubaghel0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-[#00d9ff] text-[#0a0e27] rounded-lg hover:bg-[#ffd93d] transition-all hover:scale-110 shadow-lg shadow-[#00d9ff]/50"
@@ -79,7 +79,7 @@ export default function HomeScreen() {
                 <SiX size={24} />
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:himbaghel19@gmail.com"
                 className="p-3 bg-[#00d9ff] text-[#0a0e27] rounded-lg hover:bg-[#ffd93d] transition-all hover:scale-110 shadow-lg shadow-[#00d9ff]/50"
               >
                 <Mail size={24} />
@@ -114,7 +114,7 @@ export default function HomeScreen() {
       <section id="projects" className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-yellow retro-text">
-            FEATURED PROJECTS
+            PERSONAL PROJECTS
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {PROJECTS.map((project) => (
@@ -133,33 +133,58 @@ export default function HomeScreen() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section id="contact" className="py-15 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-yellow retro-text">
-            LET&apos;S WORK TOGETHER
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-yellow retro-text">
+            CONNECT WITH ME
           </h2>
-          <p className="text-xl text-secondary mb-8 leading-relaxed">
-            I&apos;m currently available for freelance work and full-time
-            opportunities.
-          </p>
-          <a
-            href={`mailto:${PERSONAL_INFO.email}`}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-pink text-primary rounded-lg hover-bg-yellow transition-colors font-bold text-lg tracking-wide shadow-pink"
-          >
-            <Mail size={20} />
-            GET IN TOUCH
-          </a>
+          <div className="flex flex-wrap justify-center gap-4 mt-12 md:mt-8">
+            <a
+              href={PERSONAL_INFO.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow text-primary rounded-lg hover-bg-cyan  transition-colors font-bold tracking-wide shadow-xs shadow-yellow"
+            >
+              <Linkedin size={20} />
+              <span className="hidden md:block"> LinkedIn</span>
+            </a>
+            <a
+              href={PERSONAL_INFO.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow text-primary rounded-lg hover-bg-cyan  transition-colors font-bold tracking-wide shadow-yellow"
+            >
+              <Twitter size={20} />
+              <span className="hidden md:block"> Twitter</span>
+            </a>
+            <a
+              href={`mailto:${PERSONAL_INFO.email}`}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow text-primary rounded-lg hover-bg-cyan  transition-colors font-bold tracking-wide shadow-yellow"
+            >
+              <Mail size={20} />
+              <span className="hidden md:block"> Email</span>
+            </a>
+            <a
+              href="https://dev.to/himanshu-007"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow text-primary rounded-lg hover-bg-cyan  transition-colors font-bold tracking-wide shadow-yellow"
+            >
+              <span className="hidden md:block text-xl">D</span>
+              <span className="font-bold text-lg ">DEV.to</span>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t-2 border-pink">
+      {/* <footer className="py-8 border-t-2 border-pink">
         <div className="max-w-6xl mx-auto px-6 text-center text-secondary">
           <p className="font-semibold">
             &copy; 2025 {PERSONAL_INFO.name.toUpperCase()}. ALL RIGHTS RESERVED.
           </p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

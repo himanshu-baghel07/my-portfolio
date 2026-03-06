@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 interface NavigationProps {
@@ -35,7 +35,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
           </h1>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -50,23 +50,42 @@ export default function Navigation({ className = "" }: NavigationProps) {
                 {item.label}
               </a>
             ))}
+            <a
+              href="/resume/Himanshu_Baghel_Software_Developer.pdf"
+              download="Himanshu_Baghel_Software_Developer.pdf"
+              className="px-4 py-2 bg-pink text-primary rounded-lg hover:bg-yellow transition-colors font-bold tracking-wide shadow-xs shadow-sky-400 inline-flex items-center gap-2"
+            >
+              <Download size={18} />
+              Resume
+            </a>
           </div>
+          <div className="md:hidden flex gap-3">
+            <a
+              href="/resume/Himanshu_Baghel_Software_Developer.pdf"
+              download="Himanshu_Baghel_Software_Developer.pdf"
+              className="md:hidden flex items-center justify-center gap-2 text-primary bg-pink transition-all duration-300 font-bold border-2 border-pink rounded-lg px-4 py-1 hover:bg-yellow hover:border-yellow"
+              onClick={() => setIsOpen(false)}
+            >
+              <Download size={18} />
+              Resume
+            </a>
 
-          {/* Mobile Navigation Toggle */}
-          <button
-            className="md:hidden text-primary z-[90]"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle navigation"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Mobile Navigation Toggle */}
+            <button
+              className="md:hidden text-primary z-[90]"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
       {/* Mobile Navigation Menu - Full Screen Overlay */}
       <div
-        className={`fixed inset-0 bg-primary z-[80] md:hidden transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed inset-0 bg-primary z-80 md:hidden transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full pt-24 px-6">
