@@ -30,8 +30,8 @@ export default function Navigation({ className = "" }: NavigationProps) {
         className={`fixed top-0 w-full bg-nav backdrop-blur-sm z-[70] border-b-2 border-pink ${className}`}
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-yellow retro-text">
-            Portfolio
+          <h1 className="text-xl md:text-2xl font-bold text-yellow retro-text">
+            Himanshu_<b>Baghel</b>
           </h1>
 
           {/* Desktop Navigation */}
