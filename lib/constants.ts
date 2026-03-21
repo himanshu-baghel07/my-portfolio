@@ -21,10 +21,10 @@ export const SKILLS: Skills = {
   backend: [
     "🟢 Node.js",
     "⚡ Express.js",
-    "🗄️ MongoDB / PostgreSQL",
+    "🗄️ MongoDB",
     "🔐 JWT Authentication",
   ],
-  tools: ["🐙 Git / GitHub", "🐳 Docker", "☁️ AWS / Vercel", "📊 REST APIs"],
+  tools: ["🐙 Git / GitHub", "🐳 Docker", "☁️ Vercel", "📊 REST APIs"],
 };
 
 export const EXPERIENCE: Experience[] = [
@@ -128,11 +128,9 @@ export const SKILL_GROUPS: SkillGroup[] = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "PostgreSQL",
       "REST APIs",
       "JWT Authentication",
       "WebSockets",
-      "GraphQL",
     ],
   },
   {
@@ -141,7 +139,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       "Git & GitHub",
       "Docker",
-      "AWS",
       "Vercel",
       "VS Code",
       "Postman",
